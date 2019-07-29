@@ -45,6 +45,9 @@ function Predictions(){
             <Typography variant="h4" className={generic.pageTitle}>
                 Predictions
             </Typography>
+            <Typography variant="h6" className={generic.pageTitle}>
+                Note: the data on this page is a proof of concept only, and is using simulated data
+            </Typography>
             <Box className={generic.text}>  
                 This page is a proof of concept using simulated results to detect environmental anomalies. 
                 Currently, earthquake detection and prediction relies almost totally on seismic waves.

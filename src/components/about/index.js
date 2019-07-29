@@ -47,7 +47,7 @@ function About(){
                 </Typography>
                 <Box className={generic.text}>
                 Earthquakes have always posed a dangerous, unavoidable, and unpredictable threat. 
-                Today, they are detected using seismic waves coming from the earthquake. The waves will only sensed once the earthquake is already happening, which provides a warning of a few minutes at maximum.
+                Today, they are detected using seismic waves coming from the earthquake. The waves will only sensed once the earthquake is already happening, which provides a warning of a few seconds at maximum.
                 On top of this, due to the potential damage to terrain and civic systems, it can be extremely difficult and dangerous to find survivors in the debris.
                 Even if we can locate survivors within the first 24hours of a destructive earthquake, it will save their life.
                 </Box>
