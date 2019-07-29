@@ -1,0 +1,28 @@
+#map{
+  height:70vh;
+  width:70vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+#map2{
+  height:45vh;
+  width:40vw;
+  margin:'1em'
+}
+
+
+
+#query-form{
+  margin-left:1em;
+  margin-bottom:1em;
+  margin:1em;
+  
+}
+
+#go-button{
+  margin:1em;
+}
+
+.query-input{
+  margin:0.2em;
+}
