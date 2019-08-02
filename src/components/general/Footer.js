@@ -9,7 +9,7 @@ import useGenericStyles from '../../styles/genericStyles';
 import About from '../about/index'
 
 //component={Link} to="/" className={classes.menuButton}
-
+const githuburl= "https://github.com/ps9918/ShakyQuakes"
 function Footer() {
   const generic=useGenericStyles()
   const special=useSpecialStyles()
@@ -19,6 +19,10 @@ function Footer() {
         </div>
            <div className={special.text}>
          <span className={special.brand}>Shaky Quakes </span> - an IBM <span className={special.ital}>Call For Code</span> Project
+         <div className={special.text}><Link className={special.text}target="_blank" rel="noopener" href={githuburl}> 
+              Github 
+          </Link>
+          </div>
          </div>
     </div>
     

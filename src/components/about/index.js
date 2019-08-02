@@ -3,8 +3,17 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import useGenericStyles from '../../styles/genericStyles';
 import { makeStyles } from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import Link from '@material-ui/core/Link';
+import url from '../../static/env'
+
+const predicturl='https://shaky-quakes-frontend.herokuapp.com/predictions'
+const locateurl='https://shaky-quakes-frontend.herokuapp.com/locate'
+
+
 const darkblue='rgba(51,80,212)'
 const darkblueBG='rgba(51,80,212)'
+const lightblue='rgba(191, 255, 254, 0.6)'
 
 const useSpecialStyles= makeStyles(theme=>({
 
@@ -27,7 +36,41 @@ const useSpecialStyles= makeStyles(theme=>({
   number:{
     fontWeight:'bold',
     marginRight:'.6%'
-  }
+  },
+  vidandcard:{
+    display:'flex',
+    flexDirection:'row',
+  },
+  video:{
+    padding:theme.spacing(2),
+  },
+  card:{
+    width:'40%',
+    margin:'auto',
+    height:'100%',
+    display:'flex',
+    flexDirection:'column',
+    justifyContent:'space-between',
+    padding:theme.spacing(2),
+    transform: [{ rotate: '10deg' }],
+    backgroundColor:lightblue
+
+ },
+ cardTitle:{
+    padding:theme.spacing(2),
+    color:'black',
+    fontFamily: ['Lato', 'sans-serif'],
+    fontWeight:'bold',
+    margin:'auto'
+ },
+ noteText:{
+  fontFamily:'"Reenie Beanie",arial,sans-serif',
+  fontSize:'2em',
+  margin:theme.spacing(2),
+ },
+ txt:{
+   margin:theme.spacing(2)
+ }
 }));
 
 function About(){
@@ -63,6 +106,29 @@ function About(){
                 PLEASE NOTE: This project is still in its early stages, and uses simulated data to provide a proof of concept.
                 We are currently not in possession of any hardware and are utilizing limited resources to create our system and train our machine learning algorithms.
                 </Box>
+                <Box className={special.vidandcard}>
+                  <iframe className={special.video} width="560" height="315" src="https://www.youtube.com/embed/rOZVN1zsyIc" 
+                  frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+                  </iframe>  
+
+                    <Card className={special.card}>
+                        <Typography variant="h5" className={special.cardTitle}>
+                          Find Progress Updates Here:
+                          </Typography>
+               
+                          <Box className={special.noteText}>
+                          
+                               <div className={special.txt}>1) Working to migrate deployment platform to IBM Cloud</div>
+                               <div className={special.txt}>2) Speaking with vendors to acquire a thermal-imaging drone</div>
+                          </Box>
+
+                              <Box className={special.noteText}>
+                              
+                           
+                              </Box>
+
+                    </Card>             
+                </Box>
                 <Typography variant="h5" className={special.subtitle}>
                 <span className={special.number}>1.</span> Improving Earthquake Prediction
                 </Typography>
@@ -80,6 +146,9 @@ function About(){
                 Although this environmental data is currently simulated, and is modeled on data provided by environmental organizations.
                 our long term goal is to set up an IOT network of sensors to track this is earthquake-prone areas, train our algorithms, and make predictions.
                 This will open up a huge opportunity for research, and will allow us to make more accurate and intelligent predictions.
+                <Link className={generic.text} href={predicturl} target="_blank" > 
+                  Click here to view the page.
+                </Link>
                 </Box>
                 <Typography variant="h5" className={special.subtitle}>
                 <span className={special.number}>2.</span> A Safe and Simple Way to Aid Rescue
@@ -93,6 +162,9 @@ function About(){
                 <Box className={generic.text}>
                 The 'Locate' part of our site gives first responders a way to view and filter this information.
                 Anything found by the drone can be viewed in our site, and can dramatically speed up the process in finding and rescuing earthquake victims.
+                <Link className={generic.text} href={locateurl} target="_blank" > 
+                  Click here to view the page.
+                </Link>
                 </Box>
                 <Typography variant="h4" className={generic.pageTitle}>
                 Future Goals

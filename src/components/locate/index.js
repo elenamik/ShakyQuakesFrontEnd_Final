@@ -33,7 +33,7 @@ function Locate() {
           Locate Victims
         </Typography>
         <Box className={generic.text}>
-          <div>The usage of this tool is intended for rescua team with first responders to find locations of possible earthquake victims. The location coordinates are obtained by using a Artificial Intelligence powered thermal drone. 
+          <div>The usage of this tool is intended for rescue team with first responders to find locations of possible earthquake victims. The location coordinates are obtained by using a Artificial Intelligence powered thermal drone. 
             <Link target="_blank" rel="noopener" href="https://github.com/ps9918/ShakyQuakes/blob/master/human_detection_model/human_detection_model.ipynb"> Check out our github to learn more about the algorithm.</Link></div>
           <div className={special.instrucs}>
             <span className={special.toUse}>To use: </span>
